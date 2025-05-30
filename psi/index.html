@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psicólogo(a) [Nome] - Performance nos Estudos e Concursos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.1.1/24/outline/heroicons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Fonte personalizada (Exemplo com Google Fonts) */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      /* Para rolagem suave dos links internos */
+    }
+
+    .hero-bg-psico {
+      /* Imagem de fundo: estudante focado, ambiente de estudo organizado, ou abstrato calmo */
+      background-image: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 77, 64, 0.8)), url('https://images.pexels.com/photos/3228878/pexels-photo-3228878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Animação de fade-in sutil para seções (opcional com JS ou via AOS) */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased">
+
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-teal-700">PsicoPerformance</a>
+      <nav class="hidden md:flex space-x-4">
+        <a href="#desafios" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Seus Desafios</a>
+        <a href="#solucoes" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Minhas
+          Soluções</a>
+        <a href="#sobre" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Sobre Mim</a>
+        <a href="#contato" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Contato</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden text-slate-600 hover:text-teal-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+      <a href="#desafios"
+        class="block px-6 py-3 text-slate-600 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-300">Seus
+        Desafios</a>
+      <a href="#solucoes"
+        class="block px-6 py-3 text-slate-600 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-300">Minhas
+        Soluções</a>
+      <a href="#sobre"
+        class="block px-6 py-3 text-slate-600 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-300">Sobre
+        Mim</a>
+      <a href="#contato"
+        class="block px-6 py-3 text-slate-600 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-300">Contato</a>
+    </div>
+  </header>
+
+  <section class="hero-bg-psico text-white py-24 md:py-40">
+    <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">Conquiste a Aprovação Dominando sua
+        Mente e Emoções</h1>
+      <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-sm">Supere a ansiedade, melhore o foco e
+        desenvolva uma rotina de estudos imbatível com acompanhamento psicológico especializado.</p>
+      <a href="#contato" id="cta-whatsapp-hero"
+        class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-4 px-10 rounded-lg text-xl shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+        Quero Turbinar Meus Estudos!
+      </a>
+    </div>
+  </section>
+
+  <section id="desafios" class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl lg:text-4xl font-bold text-center text-teal-700 mb-12 lg:mb-16" data-aos="fade-up">Você se
+        Sente Assim nos Estudos?</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div class="bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="100">
+          <img src="https://via.placeholder.com/500x300/fecaca/ef4444?text=Ansiedade+nos+Estudos"
+            alt="Ilustração de ansiedade" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-teal-700 mb-3">Ansiedade Paralisante?</h3>
+          <p class="text-slate-600">O nervosismo antes das provas te impede de mostrar seu real potencial? Sente o
+            famoso "branco"?</p>
+        </div>
+        <div class="bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="200">
+          <img src="https://via.placeholder.com/500x300/fed7aa/f97316?text=Procrastinação+Constante"
+            alt="Ilustração de procrastinação" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-teal-700 mb-3">Procrastinação Constante?</h3>
+          <p class="text-slate-600">Deixa tudo para a última hora e se sente culpado(a) por não conseguir seguir o
+            cronograma?</p>
+        </div>
+        <div class="bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up" data-aos-delay="300">
+          <img src="https://via.placeholder.com/500x300/bfdbfe/3b82f6?text=Falta+de+Foco+e+Organização"
+            alt="Ilustração de falta de foco" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-teal-700 mb-3">Falta de Foco e Organização?</h3>
+          <p class="text-slate-600">Dificuldade em se concentrar nos estudos e em organizar uma rotina que funcione para
+            você?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucoes" class="py-16 lg:py-24 bg-teal-700 text-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 lg:mb-16" data-aos="fade-up">Minhas Ferramentas para
+        sua Aprovação</h2>
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div
+          class="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg hover:bg-white/20 transition-colors duration-300"
+          data-aos="fade-right">
+          <img src="https://via.placeholder.com/500x300/a7f3d0/059669?text=Técnicas+de+Controle+Emocional"
+            alt="Ilustração de controle emocional" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-2xl font-semibold mb-3 text-amber-400">Controle da Ansiedade e Estresse</h3>
+          <p>Aprenda técnicas eficazes para gerenciar a ansiedade pré-prova, o medo de falhar e a pressão dos estudos.
+          </p>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg hover:bg-white/20 transition-colors duration-300"
+          data-aos="fade-left">
+          <img src="https://via.placeholder.com/500x300/bae6fd/0284c7?text=Melhora+do+Foco+e+Concentração"
+            alt="Ilustração de foco" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-2xl font-semibold mb-3 text-amber-400">Otimização do Foco e Concentração</h3>
+          <p>Desenvolva estratégias para aumentar sua capacidade de concentração, memorização e absorção do conteúdo.
+          </p>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg hover:bg-white/20 transition-colors duration-300"
+          data-aos="fade-right">
+          <img src="https://via.placeholder.com/500x300/ddd6fe/7c3aed?text=Planejamento+e+Rotina+de+Estudos"
+            alt="Ilustração de planejamento" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-2xl font-semibold mb-3 text-amber-400">Planejamento e Rotina Eficaz</h3>
+          <p>Crie um plano de estudos personalizado, realista e adaptado às suas necessidades, combatendo a
+            procrastinação.</p>
+        </div>
+        <div
+          class="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg hover:bg-white/20 transition-colors duration-300"
+          data-aos="fade-left">
+          <img src="https://via.placeholder.com/500x300/fbcfe8/db2777?text=Fortalecimento+da+Mentalidade"
+            alt="Ilustração de mentalidade forte" class="rounded-lg mb-6 w-full h-48 object-cover">
+          <h3 class="text-2xl font-semibold mb-3 text-amber-400">Fortalecimento da Mentalidade</h3>
+          <p>Trabalhe sua autoconfiança, motivação e resiliência para enfrentar os desafios da jornada de estudos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="py-16 lg:py-24 bg-slate-50">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center md:space-x-12">
+        <div class="md:w-1/3 mb-8 md:mb-0" data-aos="zoom-in">
+          <img src="./foto-psi.png"
+            alt="Foto do(a) Psicólogo(a) [Nome]"
+            class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white">
+        </div>
+        <div class="md:w-2/3 text-lg" data-aos="fade-left">
+          <h2 class="text-3xl lg:text-4xl font-bold text-teal-700 mb-6">Olá, Sou [Nome do(a) Psicólogo(a)] <span
+              class="text-xl block text-amber-600">CRP: XX/YYYYY</span></h2>
+          <p class="mb-4">Minha missão é ser seu parceiro(a) na jornada rumo à aprovação. Com especialização em
+            [mencionar área, ex: Psicologia Cognitivo-Comportamental, Performance Humana], utilizo abordagens baseadas
+            em evidências para te ajudar a superar os obstáculos emocionais e comportamentais que podem estar limitando
+            seu potencial nos estudos.</p>
+          <p class="mb-4">Acredito que, com as ferramentas certas e o suporte adequado, você pode não apenas passar no
+            vestibular ou concurso, mas também desenvolver habilidades valiosas para toda a vida. Vamos juntos trilhar
+            esse caminho?</p>
+          <p class="italic text-teal-600">"Seu sucesso começa na sua mente."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl lg:text-4xl font-bold text-center text-teal-700 mb-12 lg:mb-16" data-aos="fade-up">Resultados
+        que Inspiram</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-100 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://via.placeholder.com/80x80/fdba74/c2410c?text=Aprovado+1" alt="Avatar Cliente 1"
+            class="w-20 h-20 rounded-full mb-4 border-2 border-amber-400">
+          <p class="text-slate-600 italic mb-4">"Depois que comecei o acompanhamento, minha ansiedade diminuiu muito e
+            consegui focar de verdade. Fui aprovado! Só gratidão!"</p>
+          <p class="font-semibold text-teal-600">- J. Silva, Aprovado(a) em [Nome do Concurso/Vestibular]</p>
+        </div>
+        <div class="bg-slate-100 p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://via.placeholder.com/80x80/a5f3fc/0e7490?text=Aprovada+2" alt="Avatar Cliente 2"
+            class="w-20 h-20 rounded-full mb-4 border-2 border-teal-400">
+          <p class="text-slate-600 italic mb-4">"Eu procrastinava demais e achava que não ia dar conta. As sessões me
+            ajudaram a organizar minha rotina e a acreditar em mim. Recomendo!"</p>
+          <p class="font-semibold text-teal-600">- M. Costa, Aprovado(a) em [Nome do Concurso/Vestibular]</p>
+        </div>
+      </div>
+      <p class="text-center mt-12 text-slate-500" data-aos="fade-up">Seja você o próximo caso de sucesso!</p>
+    </div>
+  </section>
+
+  <section id="contato" class="py-20 lg:py-32 bg-teal-700 text-white">
+    <div class="container mx-auto px-6 text-center" data-aos="zoom-in">
+      <img src="https://via.placeholder.com/150x150/f59e0b/78350f?text=Seta+para+o+Sucesso!"
+        alt="Ícone de alvo ou sucesso" class="mx-auto mb-8 w-24 h-24 rounded-full">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Está Pronto(a) para Transformar seus Estudos e Conquistar sua
+        Vaga?</h2>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">Não deixe que a ansiedade e a falta de preparo mental te
+        impeçam de alcançar seus sonhos. Invista em você!</p>
+      <button id="cta-whatsapp-footer"
+        class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-4 px-10 rounded-lg text-xl shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+        Agendar uma Conversa Inicial
+      </button>
+    </div>
+  </section>
+
+  <footer class="bg-slate-800 text-slate-300 py-10">
+    <div class="container mx-auto px-6 text-center">
+      <p class="mb-2">&copy; <span id="currentYear"></span> Psicólogo(a) [Nome do(a) Psicólogo(a)]. Todos os direitos
+        reservados.</p>
+      <p class="text-sm mb-1">CRP: XX/YYYYY | Telefone/WhatsApp: (XX) XXXXX-XXXX</p>
+      <p class="text-sm">Endereço (opcional): Rua Exemplo, 123, Sala 45, Cidade - UF</p>
+      <div class="mt-4">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="text-slate-400 hover:text-amber-400 mx-2 transition-colors duration-300">Instagram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          class="text-slate-400 hover:text-amber-400 mx-2 transition-colors duration-300">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Inicializar AOS (Animate On Scroll)
+    AOS.init({
+      duration: 800, // Duração da animação
+      once: true,    // Animar apenas uma vez
+      offset: 50,    // Offset (em px) para disparar a animação
+    });
+
+    // Configurações WhatsApp (IMPORTANTE: Substitua pelos seus dados)
+    const numeroWhatsApp = '5511999998888'; // Somente números, com código do país e DDD.
+    const nomePsicologo = 'Dr(a). [Nome do(a) Psicólogo(a)]';
+    const mensagemPadrao = `Olá ${nomePsicologo}, visitei sua página sobre performance nos estudos e gostaria de mais informações!`;
+
+    function abrirWhatsApp(mensagem) {
+      const mensagemCodificada = encodeURIComponent(mensagem);
+      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+      window.open(urlWhatsApp, '_blank');
+    }
+
+    const btnWhatsappHero = document.getElementById('cta-whatsapp-hero');
+    if (btnWhatsappHero) {
+      btnWhatsappHero.addEventListener('click', function (e) {
+        // Se o botão for um link <a> para #contato, previne o scroll e abre o WhatsApp
+        // Se for um <button>, não precisa do e.preventDefault() se não estiver em um form.
+        // Para este caso, como o hero button é <a>, vamos deixar o scroll e abrir whats.
+        // Se a intenção é SÓ whats, então ele deveria ser <button> ou prevenir o default.
+        // Para este exemplo, vamos fazer ele só abrir o whats.
+        e.preventDefault();
+        abrirWhatsApp(mensagemPadrao);
+      });
+    }
+
+
+    const btnWhatsappFooter = document.getElementById('cta-whatsapp-footer');
+    if (btnWhatsappFooter) {
+      btnWhatsappFooter.addEventListener('click', function () {
+        const mensagemFooter = `Olá ${nomePsicologo}, gostaria de agendar uma conversa inicial sobre performance nos estudos.`;
+        abrirWhatsApp(mensagemFooter);
+      });
+    }
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Menu Mobile Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Fechar menu ao clicar em um link (para SPAs ou páginas longas)
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Opcional: Animação de fade-in para seções ao rolar (alternativa ao AOS se quiser algo mais customizado)
+    const sections = document.querySelectorAll('.fade-in-section');
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.1 // 10% da seção visível
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Animar apenas uma vez
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+  </script>
+</body>
+
+</html>
